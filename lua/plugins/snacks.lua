@@ -71,7 +71,7 @@ return {
         },
       },
       indent = {
-        enabled = true,
+        enabled = false,
         animate = {
           enabled = false,
         },

@@ -82,6 +82,12 @@ vim.api.nvim_create_autocmd('FileType', {
     'qf',
     'startuptime',
     'checkhealth',
+    'gitsigns-blame',
+    'grug-far',
+    'help',
+    'lspinfo',
+    'notify',
+    'qf',
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
