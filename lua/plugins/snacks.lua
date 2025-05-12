@@ -34,6 +34,7 @@ return {
       rename = { enabled = false },
       bufdelete = { enabled = false },
       notifier = { enabled = true },
+      bigfile = { enabled = true },
       picker = {
         layout = {
           preset = 'ivy',

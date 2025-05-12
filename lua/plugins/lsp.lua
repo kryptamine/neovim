@@ -27,7 +27,7 @@ return {
 
           map('<leader>b', vim.lsp.buf.hover, 'Display variable type')
 
-          map('<leader>cM', function()
+          map('<leader>cm', function()
             vim.lsp.buf.code_action {
               context = {
                 ---@diagnostic disable-next-line: assign-type-mismatch

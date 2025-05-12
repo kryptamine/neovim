@@ -48,6 +48,11 @@ return {
             style = 'single',
           },
         },
+        cmdline_popup = {
+          border = {
+            style = 'single',
+          },
+        },
       },
     },
   },

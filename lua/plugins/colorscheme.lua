@@ -1,6 +1,6 @@
 return {
   {
-    'ring0-rootkit/gruber-darker.nvim',
+    'blazkowolf/gruber-darker.nvim',
     name = 'gruber-darker',
     config = function()
       require('gruber-darker').setup {
