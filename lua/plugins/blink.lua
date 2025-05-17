@@ -4,6 +4,9 @@ return {
     lazy = false,
     version = 'v0.*',
     opts = {
+      sources = {
+        min_keyword_length = 1,
+      },
       keymap = {
         ['<CR>'] = { 'select_and_accept', 'fallback' },
         ['<C-p>'] = { 'select_prev', 'fallback' },
