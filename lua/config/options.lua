@@ -1,12 +1,11 @@
 local options = {
   -- mostly just for cmp
-  completeopt = { 'menu', 'menuone', 'noselect' },
+  completeopt = { 'menu', 'menuone', 'noinsert', 'noselect' },
   encoding = 'utf-8',
   fileencoding = 'utf-8',
   title = true,
   autoindent = true,
   smartindent = true,
-  backup = false,
   showcmd = true,
   cmdheight = 0,
   laststatus = 0,
@@ -36,8 +35,6 @@ local options = {
   clipboard = 'unnamedplus',
   -- Enable break indent,
   breakindent = true,
-  -- Save undo history,
-  undofile = true,
   -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term,
   smartcase = true,
   -- Keep signcolumn on by default,
@@ -71,9 +68,13 @@ local options = {
     'winsize',
   },
 
+  -- Backup and Swap
+  backup = false,
   autoread = true,
   swapfile = false,
   smoothscroll = true,
+  -- Save undo history,
+  undofile = false,
 }
 
 for k, v in pairs(options) do
