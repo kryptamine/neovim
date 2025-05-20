@@ -74,7 +74,7 @@ local options = {
   swapfile = false,
   smoothscroll = true,
   -- Save undo history,
-  undofile = false,
+  undofile = true,
 }
 
 for k, v in pairs(options) do
