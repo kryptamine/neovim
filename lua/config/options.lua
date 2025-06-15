@@ -40,7 +40,7 @@ local options = {
   -- Keep signcolumn on by default,
   signcolumn = 'yes',
   -- Decrease update time,
-  updatetime = 250,
+  updatetime = 100,
   -- Decrease mapped sequence wait time,
   -- Displays which-key popup sooner,
   timeoutlen = 300,
@@ -69,6 +69,7 @@ local options = {
   },
 
   -- Backup and Swap
+  writebackup = false,
   backup = false,
   autoread = true,
   swapfile = false,

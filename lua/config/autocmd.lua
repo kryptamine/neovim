@@ -61,8 +61,6 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'TermClose', 'TermLeave', 'BufEnter
 vim.api.nvim_create_autocmd('ColorScheme', {
   callback = function()
     vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Normal' })
-
-    vim.cmd 'highlight Winbar guibg=none'
   end,
 })
 
