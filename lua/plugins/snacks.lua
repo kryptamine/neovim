@@ -36,6 +36,7 @@ return {
       notifier = { enabled = true },
       bigfile = { enabled = true },
       picker = {
+        filter = { cwd = true },
         layout = {
           preset = 'ivy',
           layout = {
