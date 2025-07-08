@@ -171,6 +171,7 @@ return {
       {
         'gd',
         function()
+          -- vim.lsp.buf.definition()
           Snacks.picker.lsp_definitions()
         end,
         desc = 'Goto Definition',
