@@ -1,14 +1,15 @@
 return {
-  { -- LSP Configuration & Plugins
-    'neovim/nvim-lspconfig',
-    event = { 'BufReadPre', 'BufNewFile' },
+  {
+    'mason-org/mason-lspconfig.nvim',
+    opts = {},
     dependencies = {
-      -- Automatically install LSPs and related tools to stdpath for Neovim
-      { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-      'williamboman/mason-lspconfig.nvim',
+      { 'mason-org/mason.nvim', opts = {} },
+      'neovim/nvim-lspconfig',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     config = function()
+      require('mason-lspconfig').setup {}
+
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
         callback = function(event)
@@ -48,11 +49,6 @@ return {
           end, '[C]ode [M]issing Imports')
         end,
       })
-
-      local default_capabilities = vim.lsp.protocol.make_client_capabilities()
-      local capabilities = require('blink.cmp').get_lsp_capabilities(default_capabilities)
-
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
 
       local servers = {
         vtsls = {
@@ -122,35 +118,31 @@ return {
         },
       }
 
-      -- Ensure the servers and tools above are installed
-      --  To check the current status of installed tools and/or manually install
-      --  other tools, you can run
-      --    :Mason
-      --
-      --  You can press `g?` for help in this menu.
-      require('mason').setup()
-
-      -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        'lua_ls',
+        'stylua',
+        'html',
+        'cssls',
+        'clangd',
+        'eslint',
+        'eslint_d',
+        'gopls',
+        'vtsls',
+        'black',
+        'isort',
+        'prettier',
+        'prettierd',
+        'intelephense',
+        'terraformls',
+        'tflint',
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require('mason-lspconfig').setup {
-        handlers = {
-          function(server_name)
-            local server = servers[server_name] or {}
-            -- This handles overriding only values explicitly passed
-            -- by the server configuration above. Useful when disabling
-            -- certain features of an LSP (for example, turning off formatting for tsserver)
-            server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
-          end,
-        },
-      }
+      for server_name, config in pairs(servers) do
+        vim.lsp.config(server_name, config)
+      end
     end,
   },
 }
