@@ -24,4 +24,11 @@ return {
       vim.cmd.colorscheme 'gruber-darker'
     end,
   },
+  -- {
+  --   'mcauley-penney/techbase.nvim',
+  --   config = function()
+  --     vim.cmd.colorscheme 'techbase'
+  --   end,
+  --   priority = 1000,
+  -- },
 }

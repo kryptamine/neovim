@@ -19,34 +19,9 @@ return {
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
-          -- Rename the variable under your cursor.
-          --  Most Language Servers support renaming across files, etc.
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-
-          -- Map the combined function to the <leader>ca key binding
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
           map('<leader>b', vim.lsp.buf.hover, 'Display variable type')
-
-          map('<leader>cm', function()
-            vim.lsp.buf.code_action {
-              context = {
-                ---@diagnostic disable-next-line: assign-type-mismatch
-                only = { 'source.addMissingImports.ts' },
-                diagnostics = {},
-              },
-              apply = true,
-            }
-
-            vim.lsp.buf.code_action {
-              context = {
-                ---@diagnostic disable-next-line: assign-type-mismatch
-                only = { 'source.removeUnused.ts' },
-                diagnostics = {},
-              },
-              apply = true,
-            }
-          end, '[C]ode [M]issing Imports')
         end,
       })
 
@@ -125,6 +100,7 @@ return {
         'html',
         'cssls',
         'clangd',
+        'clang-format',
         'eslint',
         'eslint_d',
         'gopls',
@@ -136,6 +112,7 @@ return {
         'intelephense',
         'terraformls',
         'tflint',
+        'cssmodules-language-server',
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
