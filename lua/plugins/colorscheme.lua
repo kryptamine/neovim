@@ -19,16 +19,8 @@ return {
           folds = true,
         },
       }
-
       vim.api.nvim_set_hl(0, '@punctuation.delimiter.jsdoc', { fg = '#73D936' })
       vim.cmd.colorscheme 'gruber-darker'
     end,
   },
-  -- {
-  --   'mcauley-penney/techbase.nvim',
-  --   config = function()
-  --     vim.cmd.colorscheme 'techbase'
-  --   end,
-  --   priority = 1000,
-  -- },
 }
