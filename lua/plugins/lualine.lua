@@ -37,7 +37,7 @@ return {
                 local devicons = require 'nvim-web-devicons'
 
                 local icon, _ = devicons.get_icon(name, nil, { default = true })
-                return icon .. '  ' .. name
+                return icon .. ' ' .. name
               end,
             },
           },
