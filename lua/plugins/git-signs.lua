@@ -12,10 +12,10 @@ return {
           text = icons.ui.BoldLineLeft,
         },
         delete = {
-          text = icons.ui.TriangleShortArrowRight,
+          text = icons.ui.Triangle,
         },
         topdelete = {
-          text = icons.ui.TriangleShortArrowRight,
+          text = icons.ui.Triangle,
         },
         changedelete = {
           text = icons.ui.BoldLineLeft,
@@ -32,10 +32,10 @@ return {
           text = icons.ui.BoldLineLeft,
         },
         delete = {
-          text = icons.ui.TriangleShortArrowRight,
+          text = icons.ui.Triangle,
         },
         topdelete = {
-          text = icons.ui.TriangleShortArrowRight,
+          text = icons.ui.Triangle,
         },
         changedelete = {
           text = icons.ui.BoldLineLeft,

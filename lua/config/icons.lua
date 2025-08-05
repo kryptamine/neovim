@@ -122,10 +122,10 @@ return {
     Telescope = '',
     Text = '',
     Tree = '',
-    Triangle = '契',
     TriangleShortArrowDown = '',
     TriangleShortArrowLeft = '',
     TriangleShortArrowRight = '',
+    Triangle = '󰐊',
     TriangleShortArrowUp = '',
   },
   diagnostics = {
