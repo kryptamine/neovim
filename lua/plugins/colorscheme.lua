@@ -1,6 +1,6 @@
 return {
   {
-    'blazkowolf/gruber-darker.nvim',
+    'AmmarAbouZor/gruber-darker.nvim',
     name = 'gruber-darker',
     config = function()
       require('gruber-darker').setup {

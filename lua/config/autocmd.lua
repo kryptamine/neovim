@@ -53,13 +53,6 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'TermClose', 'TermLeave', 'BufEnter
   end,
 })
 
--- Draw the border for LSP floating windows
-vim.api.nvim_create_autocmd('ColorScheme', {
-  callback = function()
-    vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Normal' })
-  end,
-})
-
 -- don't auto comment new line
 vim.api.nvim_create_autocmd('BufEnter', { command = [[set formatoptions-=cro]] })
 
