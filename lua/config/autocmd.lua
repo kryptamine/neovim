@@ -55,29 +55,3 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'TermClose', 'TermLeave', 'BufEnter
 
 -- don't auto comment new line
 vim.api.nvim_create_autocmd('BufEnter', { command = [[set formatoptions-=cro]] })
-
--- close some filetypes with <esc>
-vim.api.nvim_create_autocmd('FileType', {
-  group = vim.api.nvim_create_augroup('close_with_esc', { clear = true }),
-  pattern = {
-    'oil',
-    'PlenaryTestPopup',
-    'help',
-    'lspinfo',
-    'man',
-    'notify',
-    'qf',
-    'startuptime',
-    'checkhealth',
-    'gitsigns-blame',
-    'grug-far',
-    'help',
-    'lspinfo',
-    'notify',
-    'qf',
-  },
-  callback = function(event)
-    vim.bo[event.buf].buflisted = false
-    vim.keymap.set('n', '<esc>', '<cmd>close<cr>', { buffer = event.buf, silent = true })
-  end,
-})
