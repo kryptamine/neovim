@@ -1,5 +1,7 @@
 local keymap = vim.keymap
 
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 -- Diagnostic keymaps
 keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -61,8 +63,6 @@ keymap.set('n', 'dd', function()
     return 'dd'
   end
 end, { noremap = true, expr = true, desc = "Don't Yank Empty Line to Clipboard" })
-
-keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Snacks
 keymap.set('t', '<c-t>', function()
