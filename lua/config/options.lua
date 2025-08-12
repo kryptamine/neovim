@@ -1,6 +1,5 @@
 local options = {
   -- mostly just for cmp
-  completeopt = { 'menu', 'menuone', 'noinsert', 'noselect' },
   encoding = 'utf-8',
   fileencoding = 'utf-8',
   title = true,
