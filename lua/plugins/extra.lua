@@ -16,9 +16,6 @@ return {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
-    opts = {
-      check_ts = true,
-    },
   },
   -- Neovim setup for init.lua and plugin development with full signature help, docs and completion for the nvim lua API
   {
