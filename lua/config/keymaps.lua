@@ -35,9 +35,6 @@ keymap.set('n', '<leader>Q', '<cmd>qa<CR>', { desc = 'Quit all' })
 -- Better delete.
 keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking' })
 
--- Fix backspace.
-keymap.set({ 't' }, '<S-BS>', '<bs>', opts)
-
 -- Move lines up and down.
 keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)

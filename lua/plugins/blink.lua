@@ -11,6 +11,20 @@ return {
         ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
         ['<C-e>'] = { 'hide' },
       },
+      completion = {
+        menu = {
+          border = nil,
+          scrolloff = 1,
+          scrollbar = false,
+          draw = {
+            columns = {
+              { 'kind_icon' },
+              { 'label', 'label_description' },
+              { 'kind' },
+            },
+          },
+        },
+      },
     },
   },
 }
