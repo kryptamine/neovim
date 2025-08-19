@@ -1,14 +1,3 @@
-local function first(bufnr, ...)
-  local conform = require 'conform'
-  for i = 1, select('#', ...) do
-    local formatter = select(i, ...)
-    if conform.get_formatter_info(formatter, bufnr).available then
-      return formatter
-    end
-  end
-  return select(1, ...)
-end
-
 local prettier_langs = {
   'javascript',
   'typescript',
@@ -42,17 +31,11 @@ local options = {
 }
 
 for _, lang in ipairs(prettier_langs) do
-  options.formatters_by_ft[lang] = { 'prettier' }
+  options.formatters_by_ft[lang] = { 'prettierd' }
 end
 
--- Override JS/TS to prefer eslint if available
-options.formatters_by_ft.javascript = function(bufnr)
-  return { first(bufnr, 'prettierd', 'prettier'), first(bufnr, 'eslint_d', 'eslint') }
-end
-
-options.formatters_by_ft.typescript = function(bufnr)
-  return { first(bufnr, 'prettierd', 'prettier'), first(bufnr, 'eslint_d', 'eslint') }
-end
+options.formatters_by_ft.javascript = { 'prettierd', 'eslint_d' }
+options.formatters_by_ft.typescript = { 'prettierd', 'eslint_d' }
 
 return {
   'stevearc/conform.nvim',
