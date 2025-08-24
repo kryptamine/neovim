@@ -3,6 +3,8 @@ local icons = require 'config.icons'
 return {
   {
     'lewis6991/gitsigns.nvim',
+    lazy = true,
+    event = { 'BufReadPre', 'BufNewFile' },
     opts = {
       signs = {
         add = {

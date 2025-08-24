@@ -35,7 +35,7 @@ for _, lang in ipairs(prettier_langs) do
 end
 
 options.formatters_by_ft.javascript = { 'prettierd', 'eslint_d' }
-options.formatters_by_ft.typescript = { 'prettierd', 'eslint_d' }
+-- options.formatters_by_ft.typescript = { 'prettierd', 'eslint_d' }
 
 return {
   'stevearc/conform.nvim',
