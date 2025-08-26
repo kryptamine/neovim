@@ -13,6 +13,7 @@ return {
         enabled = false,
       },
     },
+    lazy = false,
     keys = {
       {
         '<leader><space>',
