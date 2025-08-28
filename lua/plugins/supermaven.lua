@@ -3,7 +3,7 @@ return {
     'supermaven-inc/supermaven-nvim',
     config = function()
       require('supermaven-nvim').setup {
-        ignore_filetypes = { 'oil' },
+        ignore_filetypes = { 'oil', 'fff_input' },
         keymaps = {
           accept_suggestion = '<c-a>',
         },
