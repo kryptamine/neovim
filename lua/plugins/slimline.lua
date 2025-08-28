@@ -18,7 +18,7 @@ return {
       configs = {
         path = {
           trunc_width = 40,
-          directory = true,
+          directory = false,
           truncate = {
             chars = 1,
             full_dirs = 3,
