@@ -7,6 +7,7 @@ local options = {
   smartindent = true,
   showcmd = true,
   cmdheight = 0,
+  laststatus = 3,
   expandtab = true,
   ignorecase = true,
   smarttab = true,
