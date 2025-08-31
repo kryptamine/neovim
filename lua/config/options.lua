@@ -92,17 +92,12 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 vim.diagnostic.config {
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '✗',
-      [vim.diagnostic.severity.WARN] = '!',
-      [vim.diagnostic.severity.INFO] = '󰋽',
-      [vim.diagnostic.severity.HINT] = '',
-    },
+  signs = false,
+  underline = {
+    severity = vim.diagnostic.severity.ERROR,
   },
-  underline = false,
   float = {
     border = 'single',
-    focusable = true,
+    source = 'if_many',
   },
 }
