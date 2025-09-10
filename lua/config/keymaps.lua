@@ -30,7 +30,6 @@ keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save current buffer' })
 
 -- quit
 keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
-keymap.set('n', '<leader>Q', '<cmd>qa<CR>', { desc = 'Quit all' })
 
 -- Better delete.
 keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking' })
