@@ -25,8 +25,8 @@ keymap.set('n', 'L', '$')
 
 local opts = { noremap = true, silent = true }
 
--- save opened buffers
-keymap.set('n', '<leader>w', '<cmd>wa<cr><esc>', { desc = 'Save open buffers' })
+-- save buffer
+keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Save current buffer' })
 
 -- quit
 keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = 'Quit' })
@@ -38,9 +38,6 @@ keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking'
 -- Move lines up and down.
 keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
-
--- Better ESC
-keymap.set('i', 'jj', '<ESC>', { silent = true })
 
 -- Paste options
 keymap.set('v', 'p', '"_dP', { desc = 'Paste Without Overwriting' })
