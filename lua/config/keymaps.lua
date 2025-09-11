@@ -7,7 +7,6 @@ keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagn
 keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 
--- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
@@ -43,8 +42,6 @@ keymap.set('v', 'p', '"_dP', { desc = 'Paste Without Overwriting' })
 
 -- Change text without putting it into the vim register,
 keymap.set('n', 'c', '"_c')
-keymap.set('n', 'C', '"_C')
-keymap.set('n', 'cc', '"_cc')
 keymap.set('x', 'c', '"_c')
 
 -- Deleting without yanking empty line

@@ -1,4 +1,7 @@
-local icons = require 'config.icons'
+local icons = {
+  BoldLineLeft = '▌',
+  Triangle = '󰐊',
+}
 
 return {
   {
@@ -8,42 +11,42 @@ return {
     opts = {
       signs = {
         add = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         change = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         delete = {
-          text = icons.ui.Triangle,
+          text = icons.Triangle,
         },
         topdelete = {
-          text = icons.ui.Triangle,
+          text = icons.Triangle,
         },
         changedelete = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         untracked = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
       },
       signs_staged = {
         add = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         change = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         delete = {
-          text = icons.ui.Triangle,
+          text = icons.Triangle,
         },
         topdelete = {
-          text = icons.ui.Triangle,
+          text = icons.Triangle,
         },
         changedelete = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
         untracked = {
-          text = icons.ui.BoldLineLeft,
+          text = icons.BoldLineLeft,
         },
       },
       preview_config = {
