@@ -153,13 +153,6 @@ return {
         end,
         desc = 'Prev Reference',
       },
-      -- {
-      --   '<leader><space>',
-      --   function()
-      --     Snacks.picker.smart()
-      --   end,
-      --   desc = 'Smart Find Files',
-      -- },
       {
         '<leader>sb',
         function()
