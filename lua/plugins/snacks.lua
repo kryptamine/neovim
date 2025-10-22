@@ -45,7 +45,7 @@ return {
         },
         formatters = {
           file = {
-            truncate = 200,
+            min_width = 30,
           },
         },
         sources = {
@@ -74,12 +74,6 @@ return {
       },
       indent = {
         enabled = false,
-        animate = {
-          enabled = false,
-        },
-        scope = {
-          hl = 'SnacksIndent6',
-        },
       },
       words = {
         enabled = true,
