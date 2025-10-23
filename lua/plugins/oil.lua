@@ -55,6 +55,9 @@ return {
             winblend = 0,
           },
         },
+        confirmation = {
+          border = 'single',
+        },
         lsp_file_methods = {
           -- Time to wait for LSP file operations to complete before skipping
           timeout_ms = 5000,
