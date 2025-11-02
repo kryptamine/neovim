@@ -37,10 +37,38 @@ return {
       bigfile = { enabled = true },
       picker = {
         filter = { cwd = true },
-        layout = {
-          preset = 'ivy',
-          layout = {
-            backdrop = 70,
+        layout = 'my_telescope_top',
+        layouts = {
+          my_telescope_top = {
+            layout = {
+              box = 'horizontal',
+              width = 0.9,
+              height = 0.85,
+              border = 'none',
+              {
+                box = 'vertical',
+                {
+                  win = 'input',
+                  height = 1,
+                  border = 'single',
+                  title = ' {title} {live} {flags} ',
+                  title_pos = 'center',
+                },
+                {
+                  win = 'list',
+                  title = ' Results ',
+                  title_pos = 'center',
+                  border = 'single',
+                },
+              },
+              {
+                win = 'preview',
+                title = ' {preview:Preview} ',
+                border = 'single',
+                title_pos = 'center',
+                width = 0.5,
+              },
+            },
           },
         },
         formatters = {

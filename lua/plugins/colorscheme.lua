@@ -21,6 +21,16 @@ return {
       }
       vim.api.nvim_set_hl(0, '@punctuation.delimiter.jsdoc', { fg = '#73D936' })
       vim.cmd.colorscheme 'gruber-darker'
+
+      local bgColor = '#181818'
+      local labelBg = '#FFDD33'
+
+      vim.api.nvim_set_hl(0, 'SnacksPickerTitle', { fg = bgColor, bg = labelBg })
+      vim.api.nvim_set_hl(0, 'SnacksPickerInputTitle', { fg = bgColor, bg = labelBg })
+      vim.api.nvim_set_hl(0, 'SnacksPickerPreviewTitle', { fg = bgColor, bg = labelBg })
+      vim.api.nvim_set_hl(0, 'SnacksPickerListTitle', { fg = bgColor, bg = labelBg })
+      vim.api.nvim_set_hl(0, 'SnacksPickerBorder', { bg = bgColor, fg = '#323232' })
+      vim.api.nvim_set_hl(0, 'SnacksPicker', { bg = bgColor })
     end,
   },
 }
