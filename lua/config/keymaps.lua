@@ -37,6 +37,11 @@ keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete without yanking'
 keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)
 keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
+-- Ex mode gross, get it out of here
+keymap.set('n', 'Q', '<nop>')
+-- Same for record, I never use it and just always get trapped in it
+keymap.set('n', 'q', '<nop>')
+
 -- Paste options
 keymap.set('v', 'p', '"_dP', { desc = 'Paste Without Overwriting' })
 
