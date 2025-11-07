@@ -53,5 +53,10 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'TermClose', 'TermLeave', 'BufEnter
   end,
 })
 
--- don't auto comment new line
-vim.api.nvim_create_autocmd('BufEnter', { command = [[set formatoptions-=cro]] })
+-- no auto continue comments on new line
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('no_auto_comment', {}),
+  callback = function()
+    vim.opt_local.formatoptions:remove { 'c', 'r', 'o' }
+  end,
+})
