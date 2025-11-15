@@ -2,7 +2,7 @@ return {
   {
     'saghen/blink.cmp',
     lazy = false,
-    version = 'v0.*',
+    version = '1.*',
     opts = {
       keymap = {
         ['<CR>'] = { 'select_and_accept', 'fallback' },
