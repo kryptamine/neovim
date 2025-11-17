@@ -49,6 +49,9 @@ keymap.set('v', 'p', '"_dP', { desc = 'Paste Without Overwriting' })
 keymap.set('n', 'c', '"_c')
 keymap.set('x', 'c', '"_c')
 
+-- Open quickfixlist
+keymap.set('n', '<leader>x', ':copen<CR>', opts)
+
 -- Deleting without yanking empty line
 keymap.set('n', 'dd', function()
   local is_empty_line = vim.api.nvim_get_current_line():match '^%s*$'

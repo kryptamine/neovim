@@ -13,7 +13,7 @@ local prettier_langs = {
 local options = {
   format_on_save = {
     lsp_format = 'fallback',
-    timeout_ms = 5000,
+    timeout_ms = 500,
   },
 
   formatters_by_ft = {
@@ -38,5 +38,6 @@ options.formatters_by_ft.javascript = { 'prettierd', 'eslint_d' }
 
 return {
   'stevearc/conform.nvim',
+  lazy = false,
   opts = options,
 }
