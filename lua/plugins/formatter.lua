@@ -38,6 +38,7 @@ options.formatters_by_ft.javascript = { 'prettierd', 'eslint_d' }
 
 return {
   'stevearc/conform.nvim',
+  event = 'BufWritePre',
   lazy = false,
   opts = options,
 }

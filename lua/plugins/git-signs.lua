@@ -6,8 +6,8 @@ local icons = {
 return {
   {
     'lewis6991/gitsigns.nvim',
+    event = 'VeryLazy',
     lazy = true,
-    event = { 'BufReadPre', 'BufNewFile' },
     opts = {
       signs = {
         add = {
