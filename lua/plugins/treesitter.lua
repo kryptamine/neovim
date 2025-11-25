@@ -39,6 +39,8 @@ return {
           'yaml',
           'terraform',
           'python',
+          'php',
+          'c',
         },
         incremental_selection = {
           enable = true,

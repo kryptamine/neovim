@@ -72,6 +72,7 @@ local options = {
   smoothscroll = true,
   -- Save undo history,
   undofile = true,
+  shell = '/opt/homebrew/bin/nu ',
 }
 
 for k, v in pairs(options) do
