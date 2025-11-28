@@ -66,3 +66,6 @@ end, { noremap = true, expr = true, desc = "Don't Yank Empty Line to Clipboard" 
 keymap.set('t', '<c-t>', function()
   Snacks.terminal.toggle()
 end, { desc = 'Toggle Terminal' })
+
+-- Open Code diff
+keymap.set('n', '<leader>ff', '<cmd>CodeDiff<CR>', opts)
