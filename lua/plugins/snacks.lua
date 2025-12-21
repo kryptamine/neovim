@@ -183,10 +183,6 @@ return {
               input = {
                 keys = {
                   ['dd'] = 'bufdelete',
-                  ['<c-d>'] = {
-                    'bufdelete',
-                    mode = { 'n', 'i' },
-                  },
                 },
               },
               list = {

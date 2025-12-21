@@ -73,6 +73,10 @@ local options = {
   -- Save undo history,
   undofile = true,
   shell = '/opt/homebrew/bin/nu ',
+
+  fillchars = {
+    eob = ' ',
+  },
 }
 
 for k, v in pairs(options) do
