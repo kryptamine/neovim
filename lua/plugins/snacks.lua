@@ -178,9 +178,47 @@ return {
       {
         '<leader>sb',
         function()
-          Snacks.picker.buffers()
+          Snacks.picker.buffers {
+            win = {
+              input = {
+                keys = {
+                  ['dd'] = 'bufdelete',
+                  ['<c-d>'] = {
+                    'bufdelete',
+                    mode = { 'n', 'i' },
+                  },
+                },
+              },
+              list = {
+                keys = {
+                  ['dd'] = 'bufdelete',
+                },
+              },
+            },
+          }
         end,
-        desc = 'Buffers',
+        desc = 'Open Buffers',
+      },
+      {
+        '<leader>bd',
+        function()
+          Snacks.bufdelete()
+        end,
+        desc = 'Delete Buffer',
+      },
+      {
+        '<leader>bo',
+        function()
+          Snacks.bufdelete.other()
+        end,
+        desc = 'Delete Other Buffers',
+      },
+      {
+        'Q',
+        function()
+          Snacks.bufdelete()
+        end,
+        desc = 'Delete Buffer',
       },
       -- LSP
       {

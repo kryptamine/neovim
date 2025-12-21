@@ -13,12 +13,12 @@ local prettier_langs = {
 local options = {
   format_on_save = {
     lsp_format = 'fallback',
-    timeout_ms = 500,
+    timeout_ms = 5000,
   },
 
   formatters_by_ft = {
     lua = { 'stylua' },
-    python = { 'isort', 'black' },
+    python = { 'black', 'ruff' },
     c = { 'clang-format' },
     go = { 'gofmt' },
   },

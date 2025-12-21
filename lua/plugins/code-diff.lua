@@ -1,6 +1,22 @@
 return {
   {
     'esmuellert/vscode-diff.nvim',
+    branch = 'next',
     dependencies = { 'MunifTanjim/nui.nvim' },
+    config = function()
+      require('vscode-diff').setup {
+        keymaps = {
+          view = {
+            next_file = ']f',
+            prev_file = '[f',
+          },
+          explorer = {
+            select = '<CR>',
+            hover = 'K',
+            refresh = 'R',
+          },
+        },
+      }
+    end,
   },
 }
