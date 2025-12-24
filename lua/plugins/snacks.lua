@@ -196,20 +196,6 @@ return {
         desc = 'Open Buffers',
       },
       {
-        '<leader>bd',
-        function()
-          Snacks.bufdelete()
-        end,
-        desc = 'Delete Buffer',
-      },
-      {
-        '<leader>bo',
-        function()
-          Snacks.bufdelete.other()
-        end,
-        desc = 'Delete Other Buffers',
-      },
-      {
         'Q',
         function()
           Snacks.bufdelete()
