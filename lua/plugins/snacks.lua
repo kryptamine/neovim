@@ -203,14 +203,14 @@ return {
         desc = 'Delete Buffer',
       },
       -- LSP
-      {
-        'gd',
-        function()
-          -- vim.lsp.buf.definition()
-          Snacks.picker.lsp_definitions()
-        end,
-        desc = 'Goto Definition',
-      },
+      -- {
+      --   'gd',
+      --   function()
+      --     vim.lsp.buf.definition()
+      --     -- Snacks.picker.lsp_definitions()
+      --   end,
+      --   desc = 'Goto Definition',
+      -- },
       {
         'gD',
         function()

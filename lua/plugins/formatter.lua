@@ -21,6 +21,7 @@ local options = {
     python = { 'black', 'ruff' },
     c = { 'clang-format' },
     go = { 'gofmt' },
+    rust = { 'rustfmt', lsp_format = 'fallback' },
   },
 
   default_format_opts = {

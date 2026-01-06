@@ -18,6 +18,7 @@ return {
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
+          map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('<leader>b', vim.lsp.buf.hover, 'Display variable type')
@@ -37,7 +38,7 @@ return {
             'typescript.tsx',
           },
           settings = {
-            complete_function_calls = true,
+            complete_function_calls = false,
             vtsls = {
               enableMoveToFileCodeAction = true,
               autoUseWorkspaceTsdk = true,
@@ -54,7 +55,7 @@ return {
               },
               updateImportsOnFileMove = { enabled = 'always' },
               suggest = {
-                completeFunctionCalls = true,
+                completeFunctionCalls = false,
               },
               inlayHints = {
                 enumMemberValues = { enabled = true },
@@ -106,6 +107,7 @@ return {
         'terraformls',
         'tflint',
         'cssmodules-language-server',
+        'rust_analyzer',
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
