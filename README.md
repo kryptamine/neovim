@@ -1,6 +1,6 @@
-# My neovim config
+# Introduction
 
-Inspired by https://github.com/adibhanna/nvim
+This is my personal neovim configuration.
 
 # Screenshots
 
