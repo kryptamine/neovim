@@ -1,7 +1,6 @@
 return {
   {
     'esmuellert/vscode-diff.nvim',
-    branch = 'next',
     dependencies = { 'MunifTanjim/nui.nvim' },
     config = function()
       require('codediff').setup {
