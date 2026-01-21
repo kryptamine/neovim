@@ -18,7 +18,6 @@ return {
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
-          map('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('<leader>b', vim.lsp.buf.hover, 'Display variable type')
