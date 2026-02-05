@@ -76,6 +76,7 @@ return {
             min_width = 30,
           },
         },
+        hidden = true,
         sources = {
           smart = {
             layout = {
@@ -206,8 +207,8 @@ return {
       {
         'gd',
         function()
-          -- vim.lsp.buf.definition()
-          Snacks.picker.lsp_definitions()
+          vim.lsp.buf.definition()
+          -- Snacks.picker.lsp_definitions()
         end,
         desc = 'Goto Definition',
       },
