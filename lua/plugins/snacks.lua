@@ -31,6 +31,9 @@ return {
       },
       notifier = { enabled = true },
       bigfile = { enabled = true },
+      picker = {
+        hidden = true,
+      },
       terminal = {
         enabled = true,
         win = {
@@ -144,6 +147,7 @@ return {
       {
         'gd',
         function()
+          -- vim.lsp.buf.definition()
           Snacks.picker.lsp_definitions()
         end,
         desc = 'Goto Definition',
