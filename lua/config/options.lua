@@ -55,6 +55,8 @@ local options = {
   -- Set highlight on search, but clear on pressing <Esc> in normal mode,
   hlsearch = true,
 
+  foldminlines = 10000,
+
   -- What to save in session.
   sessionoptions = {
     'buffers',
@@ -72,7 +74,7 @@ local options = {
   smoothscroll = true,
   -- Save undo history,
   undofile = true,
-  shell = '/opt/homebrew/bin/nu ',
+  shell = '/opt/homebrew/bin/nu',
 
   fillchars = {
     eob = ' ',

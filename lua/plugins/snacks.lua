@@ -29,71 +29,8 @@ return {
       ]],
         },
       },
-      statuscolumn = { enabled = false },
-      quickfile = { enabled = false },
-      rename = { enabled = false },
-      bufdelete = { enabled = false },
       notifier = { enabled = true },
       bigfile = { enabled = true },
-      picker = {
-        filter = { cwd = true },
-        layout = 'my_telescope_top',
-        layouts = {
-          my_telescope_top = {
-            layout = {
-              box = 'horizontal',
-              width = 0.9,
-              height = 0.85,
-              border = 'none',
-              {
-                box = 'vertical',
-                {
-                  win = 'input',
-                  height = 1,
-                  border = 'single',
-                  title = ' {title} {live} {flags} ',
-                  title_pos = 'center',
-                },
-                {
-                  win = 'list',
-                  title = ' Results ',
-                  title_pos = 'center',
-                  border = 'single',
-                },
-              },
-              {
-                win = 'preview',
-                title = ' {preview:Preview} ',
-                border = 'single',
-                title_pos = 'center',
-                width = 0.5,
-              },
-            },
-          },
-        },
-        formatters = {
-          file = {
-            min_width = 30,
-          },
-        },
-        hidden = true,
-        sources = {
-          smart = {
-            layout = {
-              preview = false,
-            },
-          },
-          lsp_definitions = {
-            focus = 'list',
-          },
-          lsp_references = {
-            focus = 'list',
-          },
-          git_status = {
-            focus = 'list',
-          },
-        },
-      },
       terminal = {
         enabled = true,
         win = {
@@ -207,8 +144,7 @@ return {
       {
         'gd',
         function()
-          vim.lsp.buf.definition()
-          -- Snacks.picker.lsp_definitions()
+          Snacks.picker.lsp_definitions()
         end,
         desc = 'Goto Definition',
       },

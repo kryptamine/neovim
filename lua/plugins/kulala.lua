@@ -18,6 +18,8 @@ return {
   },
   opts = {
     ui = {
+      default_winbar_panes = { 'body', 'headers', 'verbose', 'report' },
+      show_request_summary = false,
       scratchpad_default_contents = {
         '@token=token',
         '',
