@@ -22,6 +22,13 @@ return {
         end,
         desc = 'Open file picker',
       },
+      {
+        '<leader>sg',
+        function()
+          require('fff').live_grep()
+        end,
+        desc = 'LiFFFe grep',
+      },
     },
   },
 }
