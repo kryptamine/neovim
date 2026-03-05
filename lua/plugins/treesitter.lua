@@ -7,6 +7,7 @@ return {
     event = { 'BufReadPost', 'BufNewFile' },
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      branch = 'master',
     },
     config = function()
       require('nvim-treesitter.configs').setup {

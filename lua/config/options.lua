@@ -74,7 +74,7 @@ local options = {
   smoothscroll = true,
   -- Save undo history,
   undofile = true,
-  shell = '/opt/homebrew/bin/nu',
+  shell = '/opt/homebrew/bin/fish',
 
   fillchars = {
     eob = ' ',
