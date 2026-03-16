@@ -13,6 +13,11 @@ return {
         ['<C-e>'] = { 'hide' },
       },
       completion = {
+        accept = {
+          auto_brackets = {
+            enabled = false,
+          },
+        },
         menu = {
           border = nil,
           scrolloff = 1,
