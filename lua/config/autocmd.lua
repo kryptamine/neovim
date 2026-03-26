@@ -43,6 +43,14 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = function()
+    vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Normal' })
+
+    vim.cmd 'highlight Winbar guibg=none'
+  end,
+})
+
 -- Check if we need to reload the file when it changed
 vim.api.nvim_create_autocmd({ 'FocusGained', 'TermClose', 'TermLeave', 'BufEnter' }, {
   group = vim.api.nvim_create_augroup('checktime', { clear = true }),

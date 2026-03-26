@@ -1,6 +1,6 @@
 return {
   {
-    'AmmarAbouZor/gruber-darker.nvim',
+    'https://github.com/qwlp/gruber-darker.nvim',
     name = 'gruber-darker',
     config = function()
       require('gruber-darker').setup {
@@ -22,7 +22,7 @@ return {
       vim.api.nvim_set_hl(0, '@punctuation.delimiter.jsdoc', { fg = '#73D936' })
       vim.cmd.colorscheme 'gruber-darker'
 
-      local bgColor = '#181818'
+      local bgColor = '#000000'
       local labelBg = '#FFDD33'
 
       vim.api.nvim_set_hl(0, 'SnacksPickerTitle', { fg = bgColor, bg = labelBg })
